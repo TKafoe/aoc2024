@@ -1,6 +1,7 @@
 use std::env;
 mod day1;
 mod day2;
+mod day3;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -10,6 +11,7 @@ fn main() {
     match day_index {
         1 => day1::solver::solve(),
         2 => day2::solver::solve(),
+        3 => day3::solver::solve(),
         _ => println!("No day passed. Quitting."),
     }
 }
