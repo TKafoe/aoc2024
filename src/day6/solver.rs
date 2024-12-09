@@ -138,16 +138,9 @@ fn check_blocks(
 ) -> i32 {
     field[start_pos.0 as usize][start_pos.1 as usize] = '^';
     let mut sum = 0;
-    let mut ct = 0;
     for pos in checks {
-        ct += 1;
-        println!("{} - {}", ct, checks.len());
         let i = pos.0 as usize;
         let j = pos.1 as usize;
-        if field[i][j] != '.' {
-            dbg!((i, j));
-            dbg!(field[i][j]);
-        }
         field[i][j] = '#';
         if move_guard_until_loop_or_off_map(start_pos, field) {
             sum += 1;
