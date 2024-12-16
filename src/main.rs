@@ -8,6 +8,8 @@ mod day6;
 mod day7;
 mod day8;
 mod day9;
+mod day10;
+mod day11;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -24,6 +26,8 @@ fn main() {
         7 => day7::solver::solve(),
         8 => day8::solver::solve(),
         9 => day9::solver::solve(),
+        10 => day10::solver::solve(),
+        11 => day11::solver::solve(),
         _ => println!("No day passed. Quitting."),
     }
 }
